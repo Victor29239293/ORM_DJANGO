@@ -1,0 +1,35 @@
+Instalacion de Tailwinds Css
+1. Inicializa tu proyecto con npm
+npm init -y
+
+2. Instala Tailwind CSS
+
+npm install -D tailwindcss
+3. Crea un archivo de configuración de Tailwind CSS
+
+npx tailwindcss init
+4. Configura el archivo CSS de Tailwind
+
+/*./static/css/styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+5. Configura tu compilación de CSS
+a. Instala PostCSS y Autoprefixer
+Ejecuta el siguiente comando:
+
+npm install -D postcss postcss-cli autoprefixer
+
+
+
+
+c. Añade un script de compilación en package.json
+En tu package.json, añade el siguiente script en la sección de "scripts":
+
+  "scripts": {
+    "build": "tailwindcss -i ./static/css/styles.css -o ./static/css/output.css --minify"
+  },
+
+6. Compila tu CSS
+npm run build:css
